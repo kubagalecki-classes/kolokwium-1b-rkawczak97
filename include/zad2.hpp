@@ -8,7 +8,7 @@ using namespace std;
 // tutaj klasy PopGwiazda, RapGwiazda oraz funkcja stworzArtyste
 class PopGwiazda: public Artysta{
 public:
-	PopGwiazda(const string& p, const unsigned& l) : Artysta(p, l) {}
+	PopGwiazda(const string& p, unsigned l) : Artysta(p, l) {}
 	void graj(std::ostream& os) const override {
 		os << "PopGwiazda: " << getPseudonim();
 	}
@@ -16,7 +16,7 @@ public:
 
 class RapGwiazda : public Artysta {
 public:
-	RapGwiazda(const string& p, const unsigned& l) : Artysta(p, l) {}
+	RapGwiazda(const string& p, unsigned l) : Artysta(p, l) {}
 	void graj(std::ostream& os) const override {
 		os << "PopGwiazda: " << getPseudonim();
 	}

@@ -4,10 +4,9 @@
 
 //tutaj szablon ArtystaPlusInstrument
 template<typename T>
-class ArtystaPlusInstrument
-{
+class ArtystaPlusInstrument {
 public:
-    ArtystaPlusInstrument(const Artysta& a_, const T& i_) : a{a_}, i{i_} {}
+    ArtystaPlusInstrument(const Artysta& _a, const T& _i) : a(_a), i(_i) {}
     unsigned koncert() {return i.liczbaUczestnikow(a);}
 private:
     Artysta a;

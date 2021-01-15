@@ -13,9 +13,8 @@ class Artysta
 public:
     Artysta() { this->pseudonim = "Anonim"; this->liczba_sluchaczy = 0; }
     Artysta(const std::string& p, unsigned l) : pseudonim(p), 
-    ~Artysta() {}
     liczba_sluchaczy(l) {}
-    virtual void graj(std::ostream& os) const {
+    void graj(std::ostream& os) const {
         os << this->pseudonim << ": " << this->liczba_sluchaczy;
     }
     const std::string& getPseudonim() const

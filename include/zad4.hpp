@@ -11,7 +11,7 @@ stworzZespol(double a, std::string s){
   }
   std::vector<Artysta> v(a);
   for(int i=1; i<a+1; ++i){
-    v.push_back(s, i)
+    v.push_back(Artysta(s, i))
   }
   return v;  
 }

@@ -14,7 +14,7 @@ class Artysta {
 	~Artysta() {};
 
 	void graj(std::ostream& os) const {
-		os << this->pseudonim << " : " << this->liczba_sluchaczy;
+		os << this->pseudonim << ":" << this->liczba_sluchaczy;
 	}
 
 	const std::string& getPseudonim() const { return pseudonim; }

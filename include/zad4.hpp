@@ -4,7 +4,7 @@
 #include <vector>
 
 // tutaj funkcja stworzZespol
-std::vector<Artysta> stworzZespol(double a, const std::string& s){
+std::vector<Artysta> stworzZespol(int a, const std::string& s){
   if(size(s) != a){
     std::logic_error = "error";
     throw(logic_error);

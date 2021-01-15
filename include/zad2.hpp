@@ -8,26 +8,18 @@ using namespace std;
 // tutaj klasy PopGwiazda, RapGwiazda oraz funkcja stworzArtyste
 class PopGwiazda: public Artysta{
 public:
-	PopGwiazda() {};
-	PopGwiazda(const string& p, const unsigned& l) : pseudonim(p), liczba_sluchaczy(l) {}
-	void graj(std::ostream& os) const {
-		os << "PopGwiazda: " << this->pseudonim;
+	PopGwiazda(const string& p, const unsigned& l) : Artysta(p, l) {}
+	void graj(std::ostream& os) const override {
+		os << "PopGwiazda: " << getPseudonim();
 	}
-private:
-	string pseudonim;
-	unsigned liczba_sluchaczy;
 };
 
 class RapGwiazda : public Artysta {
 public:
-	RapGwiazda() {};
-	RapGwiazda(const string& p, const unsigned& l) : pseudonim(p), liczba_sluchaczy(l) {}
-	void graj(std::ostream& os) const {
-		os << "PopGwiazda: " << this->pseudonim;
+	RapGwiazda(const string& p, const unsigned& l) : Artysta(p, l) {}
+	void graj(std::ostream& os) const override {
+		os << "PopGwiazda: " << getPseudonim();
 	}
-private:
-	string pseudonim;
-	unsigned liczba_sluchaczy;
 };
 
 Artysta* stworzArtyste(string& str) {

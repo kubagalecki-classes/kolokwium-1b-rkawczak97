@@ -6,7 +6,7 @@
 template<class T>
 class ArtystaPlusInstrument {
 public:
-	ArtystaPlusInstrument(const Artysta& A, const& T t) {}
+	ArtystaPlusInstrument(const Artysta& A, const& T t) : a(A), i(t) {}
 	unsigned koncert(){ return i.liczbaUczestnikow(a); }
 private:
 	Artysta a;

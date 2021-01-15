@@ -6,27 +6,24 @@
 
 using namespace std;
 // tutaj klasy PopGwiazda, RapGwiazda oraz funkcja stworzArtyste
-class PopGwiazda: public Artysta{
+class PopGwiazda : public Artysta
+{
 public:
-	PopGwiazda(const string& p, unsigned l) : Artysta(p, l) {}
-	void graj(std::ostream& os) const override {
-		os << "PopGwiazda: " << getPseudonim();
-	}
+    PopGwiazda(const std::string& p, unsigned ls) : Artysta(p, ls) {}
+    void graj(std::ostream& stream) const override {stream << "PopGwiazda: " << getPseudonim();}
 };
 
-class RapGwiazda : public Artysta {
+class RapGwiazda : public Artysta
+{
 public:
-	RapGwiazda(const string& p, unsigned l) : Artysta(p, l) {}
-	void graj(std::ostream& os) const override {
-		os << "PopGwiazda: " << getPseudonim();
-	}
+    RapGwiazda(const std::string& p, unsigned ls) : Artysta(p, ls) {}
+    void graj(std::ostream& stream) const override {stream << "RapGwiazda: " << getPseudonim();}
 };
 
-Artysta* stworzArtyste(string& str) {
-	if (str.front() == toupper(str.front())) {
-		return new PopGwiazda("BTS", 1234);
-	}
-	else {
-		return new RapGwiazda("Ye", 4321);
-	}
+Artysta* stworzArtyste(const std::string& p)
+{
+    if (p.front() == std::toupper(p.front()))
+        return new PopGwiazda{"BTS", 1234};
+    else
+        return new RapGwiazda{"Ye", 4321};
 }

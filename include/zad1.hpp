@@ -11,23 +11,21 @@ using namespace std;
 class Artysta 
 {
 public:
-    Artysta() { this->pseudonim = "Anonim"; this->liczba_sluchaczy = 0; }
-    Artysta(const std::string& p, unsigned l) : pseudonim(p), 
-    liczba_sluchaczy(l) {}
-    ~Artysta() {}
-    virtual void graj(std::ostream& os) const {
-        os << this->pseudonim << ": " << this->liczba_sluchaczy;
-    }
-    const std::string& getPseudonim() const
+    Artysta() : pseudonim{"Anonim"}, liczba_sluchaczy{0} {}
+    Artysta(const std::string& p_, unsigned l_) : pseudonim{p_}, liczba_sluchaczy{l_} {}
+
+    virtual void graj(std::ostream& stream) const
     {
-        return this->pseudonim;
+
+        stream << pseudonim << ": " << liczba_sluchaczy;
     }
-    unsigned getSluchacze() const
-    {
-        return this->liczba_sluchaczy;
-    }
+
+    const std::string& getPseudonim() const {return pseudonim;}
+    unsigned getSluchacze() const {return liczba_sluchaczy;}
+
+
 private:
-    string pseudonim;
-    unsigned liczba_sluchaczy;
+    std::string pseudonim;
+    unsigned liczba_sluchaczy; 
 };
 

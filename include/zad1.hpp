@@ -8,7 +8,7 @@
 
 // tutaj klasa Artysta
 class Artysta {
-	Artysta() : pseudonim("Anonim") {};
+	Artysta() : pseudonim("Anonim"), liczba_sluchaczy(0) {};
 	Artysta(const std::string& _psedonim, unsigned _liczba_sluchaczy) :
 		pseudonim(_psedonim), liczba_sluchaczy(_liczba_sluchaczy) {};
 	~Artysta() {};

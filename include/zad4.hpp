@@ -10,8 +10,8 @@ stworzZespol(double a, std::string s){
     throw(logic_error);
   }
   std::vector<Artysta> v(a);
-  v.push_back(Artysta(s, 1));
-  v.push_back(Artysta(s, 2)); 
-  v.push_back(Artysta(s, 3));
+  for(int i=1; i<a+1; ++i){
+    v.push_back(s, i)
+  }
   return v;  
 }

@@ -14,7 +14,8 @@ public:
     Artysta() { this->pseudonim = "Anonim"; this->liczba_sluchaczy = 0; }
     Artysta(const std::string& p, unsigned l) : pseudonim(p), 
     liczba_sluchaczy(l) {}
-    void graj(std::ostream& os) const {
+    ~Artysta() {}
+    virtual void graj(std::ostream& os) const {
         os << this->pseudonim << ": " << this->liczba_sluchaczy;
     }
     const std::string& getPseudonim() const

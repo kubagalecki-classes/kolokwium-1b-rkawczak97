@@ -4,14 +4,15 @@
 #include <vector>
 
 // tutaj funkcja stworzZespol
-std::vector<Artysta> stworzZespol(int a, const std::string& s){
-  if(size(s) != a){
-    std::logic_error e = "error";
-    throw(e);
-  }
-  std::vector<Artysta> v;
-  for(int i=1; i<a+1; ++i){
-    v.push_back(Artysta(s, i))
-  }
-  return v;  
+std::vector<Artysta> stworzZespol(int a, const std::string& str) {
+    std::vector<Artysta> v;
+    if (str.size() != a){
+      throw std::logic_error("error");
+    }
+    
+    for(int i = 1; i < a+1; i++){
+      v.push_back(Artysta(str, i));
+    }
+
+    return v;
 }
